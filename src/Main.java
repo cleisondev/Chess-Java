@@ -14,12 +14,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        ChessMatch chessMatch = new ChessMatch();
+        ChessMatch chessMatch = new ChessMatch(); //Criando o objeto
 
         while (true){
             try{
-                UI.clearScreen();
-                UI.printBoard(chessMatch.getPieces());
+                UI.clearScreen(); //Limpando a tela
+                UI.printBoard(chessMatch.getPieces());//Pegando as peças
                 System.out.println();
                 System.out.print("Source: ");
                 ChessPosition source = UI.readChessPosition(sc);

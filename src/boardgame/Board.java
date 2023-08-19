@@ -38,14 +38,14 @@ public class Board {
 
     public void placePiece(Piece piece, Position pos){
         if(thereIsaPiece(pos)){
-            throw new BoardException("There is already a pience on position" + pos);
+            throw new BoardException("There is already a piece on position" + pos);
         }
         pieces[pos.getRow()][pos.getColumn()] = piece;
         piece.position = pos;
     }
 
     private boolean positionExists(int row,int column ){
-       return row >= 0 && row <= Rows && column >= 0 && column <= Columns;
+       return row >= 0 && row < Rows && column >= 0 && column < Columns;
     }
 
     public boolean positionExists(Position pos){
